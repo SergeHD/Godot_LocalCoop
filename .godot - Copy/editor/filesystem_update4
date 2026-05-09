@@ -1,0 +1,6 @@
+res://component/player_input_synchronizer_component.tscn
+res://entities/player.gd
+res://component/player_input_synchronizer_component.gd
+res://entities/player.tscn
+res://main.gd
+res://entities/player/player.tscn

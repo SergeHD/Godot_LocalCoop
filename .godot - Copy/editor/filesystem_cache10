@@ -1,0 +1,17 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1777826088
+icon.svg::CompressedTexture2D::4332387615057945782::1776028583::1776028596::1::::<><><>0<>0<>af33f35998605f69cbaea0b7dc22b668<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+main.gd::GDScript::6702488267519852383::1777825228::0::1::::<>Node<><>0<>0<><>::
+main.tscn::PackedScene::4224969941704148139::1777139500::0::1::::<><><>0<>0<><>::uid://c2q0ac6b6ebop::::res://main.gd
+::res://component/::1777823589
+player_input_synchronizer_component.tscn::PackedScene::4894080063053885728::1777823054::0::1::::<><><>0<>0<><>::uid://cl85rbvjm4l65::::res://component/player_input_synchronizer_component.gd
+player_input_synchronizer_component.gd::GDScript::5614895066958259440::1777823589::0::1::::PlayerInputSynchronizerComponent<>MultiplayerSynchronizer<><>0<>0<><>::
+::res://entities/::1777830064
+::res://entities/player/::1777830110
+player-medium.png::CompressedTexture2D::4700438372721570242::1777830110::1777830110::1::::<><><>0<>0<>cbc3b493149a5092869005d4ac32e0bb<>res://.godot/imported/player-medium.png-b8d173b72dbf316a6d860feccca9f818.ctex::
+player.gd::GDScript::1804731936388379092::1777825266::0::1::::Player<>CharacterBody2D<><>0<>0<><>::
+player.tscn::PackedScene::5785408523687754266::1777830125::0::1::::<><><>0<>0<><>::uid://0yhw3bp8p365::::res://entities/player.gd<>uid://cbyy1v313rjoy::::res://component/player_input_synchronizer_component.tscn
+::res://ui/::1776449776
+::res://ui/main_menu/::1776537757
+main_menu.gd::GDScript::8999633385891320200::1776537749::0::1::::<>Control<><>0<>0<><>::
+main_menu.tscn::PackedScene::5873787372624705293::1776537757::0::1::::<><><>0<>0<><>::uid://d1hqv862bxbxo::::res://ui/main_menu/main_menu.gd
