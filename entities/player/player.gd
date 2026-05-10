@@ -1,15 +1,21 @@
+# Synced Outputs and Game logic
 class_name Player
 extends CharacterBody2D
 
 @onready var player_input_synchronizer_component: PlayerInputSynchronizerComponent  = $PlayerInputSynchronizerComponent
+@onready var weapon_root: Node2D = $WeaponRoot
 
 var input_multiplayer_authority: int
 
+
 func _ready():
 	player_input_synchronizer_component.set_multiplayer_authority(input_multiplayer_authority)
-	set_process(is_multiplayer_authority())
 	
 	
 func _process(delta: float) -> void:
-	velocity = player_input_synchronizer_component.movement_vector* 100
-	move_and_slide()
+	var aim_position = weapon_root.global_position + player_input_synchronizer_component.aim_vector
+	weapon_root.look_at(aim_position) #Rotates the node so that its local +X axis points towards the point
+	
+	if is_multiplayer_authority(): # if in server. Anything game-critical should happen here - THE SERVER
+		velocity = player_input_synchronizer_component.movement_vector * 100
+		move_and_slide()
