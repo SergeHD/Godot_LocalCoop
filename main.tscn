@@ -1,10 +1,16 @@
 [gd_scene format=3 uid="uid://b1guvxe0n0cop"]
 
 [ext_resource type="Script" uid="uid://c2q0ac6b6ebop" path="res://main.gd" id="1_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://4c23e6e6vix3" path="res://assets/arena.png" id="2_0xm2m"]
 
 [node name="Main" type="Node" unique_id=1326948634]
 script = ExtResource("1_0xm2m")
 
 [node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="." unique_id=727528473]
-_spawnable_scenes = PackedStringArray("uid://qa8btyryua5c")
+_spawnable_scenes = PackedStringArray("uid://qa8btyryua5c", "uid://ddh5hb3k1eaev")
 spawn_path = NodePath("..")
+
+[node name="Arena" type="Sprite2D" parent="." unique_id=2134115087]
+position = Vector2(320, 185)
+texture = ExtResource("2_0xm2m")
+metadata/_edit_lock_ = true

@@ -24,7 +24,7 @@ func _on_host_pressed() -> void:
 	
 func _on_join_pressed() -> void:
 	var client_peer := ENetMultiplayerPeer.new() 
-	client_peer.create_client("192.168.0.13",PORT) #IP/UDP to connect to Host ← handshake 
+	client_peer.create_client("10.0.0.65",PORT) #IP/UDP to connect to Host ← handshake 
 	multiplayer.multiplayer_peer = client_peer
 	# ← no scene change here, just waits... 
 	#  Can't change scene immediately, must WAIT for handshake with server
