@@ -4,6 +4,7 @@ var player_scene: PackedScene = preload("uid://cooq3ldg1a88u")
 var enemy_scene: PackedScene = preload("uid://ddh5hb3k1eaev")
 
 @onready var multiplayer_spawner: MultiplayerSpawner = $MultiplayerSpawner
+@onready var player_spawn_position: Marker2D = $PlayerSpawnPosition
 
 
 func _ready():
@@ -11,13 +12,14 @@ func _ready():
 		var player = player_scene.instantiate() as Player
 		player.name = str(data.peer_id)
 		player.input_multiplayer_authority = data.peer_id
+		player.global_position = player_spawn_position.global_position
 		return player
 
 	peer_ready.rpc_id(1)
 	 
 	if is_multiplayer_authority(): 
 		var enemy = enemy_scene.instantiate() as Node2D # hard coding enemt instaiate for better despawn on client side
-		enemy.global_position = Vector2.ONE * 100
+		enemy.global_position = Vector2.ONE * 200
 		add_child(enemy) #adding it to the root scene
 		# enemies global positions is not synced, add multiplayer synchronizer to the enemy node 
 

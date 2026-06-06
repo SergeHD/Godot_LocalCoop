@@ -13,6 +13,8 @@ properties/0/replication_mode = 1
 [sub_resource type="CircleShape2D" id="CircleShape2D_4flbx"]
 
 [node name="Player" type="CharacterBody2D" unique_id=1495648901]
+collision_layer = 0
+motion_mode = 1
 script = ExtResource("1_merdl")
 
 [node name="PlayerInputSynchronizerComponent" parent="." unique_id=470191528 node_paths=PackedStringArray("aim_root") instance=ExtResource("2_b0kkn")]
@@ -40,6 +42,5 @@ centered = false
 offset = Vector2(-15, -6)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=252348885]
-visible = false
 position = Vector2(0, -10)
 shape = SubResource("CircleShape2D_4flbx")
