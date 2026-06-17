@@ -1,10 +1,14 @@
 [gd_scene format=3 uid="uid://dpg6asbp2fac1"]
 
 [ext_resource type="Script" uid="uid://dhcpam21q70ms" path="res://manager/enemy_manager.gd" id="1_26fr1"]
+[ext_resource type="PackedScene" uid="uid://ddh5hb3k1eaev" path="res://entities/enemy/enemy.tscn" id="2_hctvm"]
 
 [node name="EnemyManager" type="Node" unique_id=700862483]
 script = ExtResource("1_26fr1")
+enemy_scene = ExtResource("2_hctvm")
+
+[node name="RoundTimer" type="Timer" parent="." unique_id=330775973]
+one_shot = true
 
 [node name="SpawnIntervalTimer" type="Timer" parent="." unique_id=1115499654]
-one_shot = true
 autostart = true
