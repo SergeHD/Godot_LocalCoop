@@ -11,4 +11,4 @@ enemy_scene = ExtResource("2_hctvm")
 one_shot = true
 
 [node name="SpawnIntervalTimer" type="Timer" parent="." unique_id=1115499654]
-autostart = true
+one_shot = true
